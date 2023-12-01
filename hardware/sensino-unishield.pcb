@@ -6,7 +6,7 @@ FileVersion[20070407]
 PCB["" 59055 196850]
 
 Grid[393.0 0 0 1]
-Cursor[786 12183 0.000000]
+Cursor[58950 0 0.000000]
 PolyArea[3100.006200]
 Thermal[0.500000]
 DRC[1000 1000 1000 1000 1500 1000]
@@ -786,7 +786,7 @@ Symbol['~' 1200]
 	SymbolLine[1500 3500 2000 3500 800]
 	SymbolLine[2000 3500 2500 3000 800]
 )
-Attribute("import::src0" "sensino-unishield.sch")
+Attribute("import::src0" "/home/mamatyas/EDA/schemes/sat-shield.sch")
 Attribute("PCB::grid::unit" "mil")
 Via[51969 125984 3600 1200 0 2000 "" "thermal(5X)"]
 Via[20472 74016 3600 1200 0 2000 "" "thermal(5X)"]
@@ -820,77 +820,18 @@ Element["" "CONNECTOR 3 2" "CONN3" "unknown" 17465 27307 -2219 5707 0 100 ""]
 
 	)
 
-Element["" "LGA8" "U4" "unknown" 11528 91866 3139 10189 0 100 ""]
-(
-	Attribute("device" "CONNECTOR_8")
-	Attribute("manufacturer" "unknown")
-	Attribute("manufacturer_part_number" "unknown")
-	Attribute("vendor" "unknown")
-	Attribute("vendor_part_number" "unknown")
-	Pad[3150 -7480 5118 -7480 2165 2000 4165 "1" "1" "square,edge2"]
-	Pad[3150 -2559 5118 -2559 2165 2000 4165 "2" "2" "square,edge2"]
-	Pad[3150 2362 5118 2362 2165 2000 4165 "3" "3" "square,edge2"]
-	Pad[3150 7283 5118 7283 2165 2000 4165 "4" "4" "square,edge2"]
-	Pad[-5315 -7480 -3346 -7480 2165 2000 4165 "5" "5" "square"]
-	Pad[-5315 -2559 -3346 -2559 2165 2000 4165 "6" "6" "square"]
-	Pad[-5315 2362 -3346 2362 2165 2000 4165 "7" "7" "square"]
-	Pad[-5315 7283 -3346 7283 2165 2000 4165 "8" "8" "square"]
-	ElementLine [-5512 -9646 5315 -9646 1000]
-	ElementLine [-5512 9449 5315 9449 1000]
-
-	)
-
-Element["" "TO92" "U5" "unknown" 24882 49961 7468 -11430 0 100 ""]
+Element["onsolder" "TO92" "U5" "unknown" 24882 49075 7468 11430 0 100 "auto"]
 (
 	Attribute("device" "DS18B20")
 	Attribute("manufacturer" "unknown")
 	Attribute("manufacturer_part_number" "unknown")
 	Attribute("vendor" "unknown")
 	Attribute("vendor_part_number" "unknown")
-	Pin[0 -5500 4500 3000 5100 2900 "GND" "1" "thermal(0X)"]
+	Pin[0 5500 4500 3000 5100 2900 "GND" "1" "warn,thermal(0X)"]
 	Pin[0 0 4500 3000 5100 2900 "DQ" "2" ""]
-	Pin[0 5500 4500 3000 5100 2900 "VCC" "3" "thermal(0X)"]
-	ElementLine [-5200 -7600 -5200 7600 1000]
-	ElementArc [0 0 9200 9200 56 248 1000]
-
-	)
-
-Element["" "DHT22" "U2" "unknown" 29685 145244 -23944 -14025 0 100 ""]
-(
-	Attribute("device" "CONNECTOR_4")
-	Attribute("manufacturer" "unknown")
-	Attribute("manufacturer_part_number" "unknown")
-	Attribute("vendor" "unknown")
-	Attribute("vendor_part_number" "unknown")
-	Pin[12205 4331 6000 3000 6600 2800 "1" "1" "edge2"]
-	Pin[4134 4331 6000 3000 6600 2800 "2" "2" "edge2"]
-	Pin[-3937 4331 6000 3000 6600 2800 "3" "3" "edge2,thermal(5X)"]
-	Pin[-12008 4331 6000 3000 6600 2800 "4" "4" "edge2,thermal(0X)"]
-	ElementLine [-29134 14173 29331 14173 1000]
-	ElementLine [-29134 -15945 29331 -15945 1000]
-	ElementLine [29331 -15945 29331 14173 1000]
-	ElementLine [-29134 -15945 -29134 14173 1000]
-	ElementLine [16535 -12598 26378 -12598 1000]
-	ElementLine [16535 -12598 16535 -9843 1000]
-	ElementLine [16535 -9843 17323 -9055 1000]
-	ElementLine [17323 -9055 25591 -9055 1000]
-	ElementLine [25591 -9055 26378 -9843 1000]
-	ElementLine [26378 -12598 26378 -9843 1000]
-	ElementLine [16535 -6693 26378 -6693 1000]
-	ElementLine [16535 -2756 26378 -2756 1000]
-	ElementLine [21654 -6693 21654 -2756 1000]
-	ElementLine [26378 -1181 26378 4331 1000]
-	ElementLine [16535 1575 26378 1575 1000]
-	ElementLine [13386 -12598 13386 -9055 1000]
-	ElementLine [10236 -9055 13386 -9055 1000]
-	ElementLine [10236 -12598 10236 -9055 1000]
-	ElementLine [5118 -12598 10236 -12598 1000]
-	ElementLine [5118 -12598 5118 -9055 1000]
-	ElementLine [13386 -6693 13386 -3150 1000]
-	ElementLine [10236 -3150 13386 -3150 1000]
-	ElementLine [10236 -6693 10236 -3150 1000]
-	ElementLine [5118 -6693 10236 -6693 1000]
-	ElementLine [5118 -6693 5118 -3150 1000]
+	Pin[0 -5500 4500 3000 5100 2900 "VCC" "3" "thermal(0X)"]
+	ElementLine [-5200 7600 -5200 -7600 1000]
+	ElementArc [0 0 9200 9200 -56 -248 1000]
 
 	)
 
@@ -972,7 +913,7 @@ Element["" "0805" "C1" "1uF" 30315 72244 -61 -13372 0 100 ""]
 	Attribute("vendor" "unknown")
 	Attribute("vendor_part_number" "unknown")
 	Pad[-393 -3543 393 -3543 5118 2000 5718 "1" "1" "square"]
-	Pad[-393 3543 393 3543 5118 2000 5718 "2" "2" "square"]
+	Pad[-393 3543 393 3543 5118 2000 5718 "2" "2" "square,warn"]
 	ElementLine [2755 -393 2755 393 800]
 	ElementLine [-2755 -393 -2755 393 800]
 
@@ -985,17 +926,17 @@ Element["" "CONNECTOR 10 2" "CONN1" "unknown" 51955 97370 -13455 6105 0 100 ""]
 	Attribute("manufacturer_part_number" "unknown")
 	Attribute("vendor" "unknown")
 	Attribute("vendor_part_number" "unknown")
-	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,thermal(5X)"]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,warn,thermal(5X)"]
 	Pin[-10000 0 6000 3000 6600 3800 "2" "2" ""]
 	Pin[0 -10000 6000 3000 6600 3800 "3" "3" ""]
 	Pin[-10000 -10000 6000 3000 6600 3800 "4" "4" ""]
-	Pin[0 -20000 6000 3000 6600 3800 "5" "5" ""]
-	Pin[-10000 -20000 6000 3000 6600 3800 "6" "6" ""]
-	Pin[0 -30000 6000 3000 6600 3800 "7" "7" ""]
+	Pin[0 -20000 6000 3000 6600 3800 "5" "5" "warn"]
+	Pin[-10000 -20000 6000 3000 6600 3800 "6" "6" "warn"]
+	Pin[0 -30000 6000 3000 6600 3800 "7" "7" "warn"]
 	Pin[-10000 -30000 6000 3000 6600 3800 "8" "8" ""]
 	Pin[0 -40000 6000 3000 6600 3800 "9" "9" ""]
-	Pin[-10000 -40000 6000 3000 6600 3800 "10" "10" ""]
-	Pin[0 -50000 6000 3000 6600 3800 "11" "11" ""]
+	Pin[-10000 -40000 6000 3000 6600 3800 "10" "10" "warn"]
+	Pin[0 -50000 6000 3000 6600 3800 "11" "11" "warn"]
 	Pin[-10000 -50000 6000 3000 6600 3800 "12" "12" ""]
 	Pin[0 -60000 6000 3000 6600 3800 "13" "13" ""]
 	Pin[-10000 -60000 6000 3000 6600 3800 "14" "14" ""]
@@ -1013,6 +954,66 @@ Element["" "CONNECTOR 10 2" "CONN1" "unknown" 51955 97370 -13455 6105 0 100 ""]
 	ElementLine [-5000 -5000 -5000 5000 1000]
 
 	)
+
+Element["" "LGA8" "U4" "unknown" 11397 91962 3663 10093 0 100 ""]
+(
+	Pad[3150 -7480 5118 -7480 2165 2000 4165 "" "5" "square,edge2"]
+	Pad[3150 -2559 5118 -2559 2165 2000 4165 "" "6" "square,edge2"]
+	Pad[3150 2362 5118 2362 2165 2000 4165 "" "7" "square,warn,edge2"]
+	Pad[3150 7283 5118 7283 2165 2000 4165 "" "8" "square,warn,edge2"]
+	Pad[-5315 -7480 -3346 -7480 2165 2000 4165 "" "1" "square,warn"]
+	Pad[-5315 -2559 -3346 -2559 2165 2000 4165 "" "2" "square,warn"]
+	Pad[-5315 2362 -3346 2362 2165 2000 4165 "" "3" "square"]
+	Pad[-5315 7283 -3346 7283 2165 2000 4165 "" "4" "square,warn"]
+	ElementLine [-5512 -9646 5315 -9646 1000]
+	ElementLine [-5512 9449 5315 9449 1000]
+
+	)
+
+Element["onsolder" "DHT22" "U2" "unknown" 29265 104765 26695 -15990 2 100 "auto"]
+(
+	Attribute("device" "CONNECTOR_4")
+	Attribute("manufacturer" "unknown")
+	Attribute("manufacturer_part_number" "unknown")
+	Attribute("vendor" "unknown")
+	Attribute("vendor_part_number" "unknown")
+	Pin[-12205 4331 6000 3000 6600 2800 "1" "1" "warn,edge2"]
+	Pin[-4134 4331 6000 3000 6600 2800 "2" "2" "edge2"]
+	Pin[3937 4331 6000 3000 6600 2800 "3" "3" "edge2,thermal(5X)"]
+	Pin[12008 4331 6000 3000 6600 2800 "4" "4" "edge2,thermal(0X)"]
+	ElementLine [-29331 14173 29134 14173 1000]
+	ElementLine [-29331 -15945 29134 -15945 1000]
+	ElementLine [-29331 -15945 -29331 14173 1000]
+	ElementLine [29134 -15945 29134 14173 1000]
+	ElementLine [-26378 -12598 -16535 -12598 1000]
+	ElementLine [-16535 -12598 -16535 -9843 1000]
+	ElementLine [-16535 -9843 -17323 -9055 1000]
+	ElementLine [-25591 -9055 -17323 -9055 1000]
+	ElementLine [-25591 -9055 -26378 -9843 1000]
+	ElementLine [-26378 -12598 -26378 -9843 1000]
+	ElementLine [-26378 -6693 -16535 -6693 1000]
+	ElementLine [-26378 -2756 -16535 -2756 1000]
+	ElementLine [-21654 -6693 -21654 -2756 1000]
+	ElementLine [-26378 -1181 -26378 4331 1000]
+	ElementLine [-26378 1575 -16535 1575 1000]
+	ElementLine [-13386 -12598 -13386 -9055 1000]
+	ElementLine [-13386 -9055 -10236 -9055 1000]
+	ElementLine [-10236 -12598 -10236 -9055 1000]
+	ElementLine [-10236 -12598 -5118 -12598 1000]
+	ElementLine [-5118 -12598 -5118 -9055 1000]
+	ElementLine [-13386 -6693 -13386 -3150 1000]
+	ElementLine [-13386 -3150 -10236 -3150 1000]
+	ElementLine [-10236 -6693 -10236 -3150 1000]
+	ElementLine [-10236 -6693 -5118 -6693 1000]
+	ElementLine [-5118 -6693 -5118 -3150 1000]
+
+	)
+Rat[7197 84386 0 12939 111992 5  "via"]
+Rat[25131 109096 5 40946 119684 0  "via"]
+Rat[24409 116929 0 40946 119684 0  "via"]
+Rat[7197 89307 0 15662 89307 0  ""]
+Rat[13260 106299 5 40946 119684 0  "via"]
+Rat[20472 74016 5 40946 119684 0  "via"]
 Layer(1 "top")
 (
 	Line[7465 27307 7465 6315 800 1200 "clearline"]
